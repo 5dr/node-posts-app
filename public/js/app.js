@@ -27,7 +27,7 @@ postId.addEventListener('submit', (e) => {
     m2.textContent = ''
     m3.textContent = ''
 
-    fetch('http://localhost:3000/post?id=' + id).then((res) => {
+    fetch('/post?id=' + id).then((res) => {
         res.json().then((data) => {
             m1.textContent = data.post.userId
             m2.textContent = data.post.title

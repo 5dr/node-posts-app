@@ -4,6 +4,7 @@ const hbs = require('hbs')
 const post = require('./app-back-end.js')
 
 const app = express()
+const port = process.env.PORT || 3000
 
 //Define paths for Express config
 const publicDirFolder = path.join(__dirname, '../public') //علشان يقرا مسار الcss و js
@@ -98,6 +99,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(3000, () => {
-    console.log('Server is up on port 3000.')
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 })
